@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D4C279822C92A0600572BCB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4C279722C92A0600572BCB /* Default-568h@2x.png */; };
+		3D4C279A22C931CD00572BCB /* SimpsonsQuotesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C279922C931CD00572BCB /* SimpsonsQuotesDelegate.swift */; };
+		3D4C279D22C9421A00572BCB /* UITextFieldUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C279C22C9421A00572BCB /* UITextFieldUtils.swift */; };
+		3D4C27A022C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C279F22C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift */; };
+		3D4C27A422D11E4200572BCB /* UIViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C27A322D11E4200572BCB /* UIViewControllerUtils.swift */; };
+		3D878F4B22C7F3200003CCE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D878F4A22C7F3200003CCE8 /* AppDelegate.swift */; };
+		3D878F4D22C7F3200003CCE8 /* SimpsonsQuotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D878F4C22C7F3200003CCE8 /* SimpsonsQuotesPresenter.swift */; };
+		3D878F5222C7F3200003CCE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D878F5122C7F3200003CCE8 /* Assets.xcassets */; };
+		3D878F6022C7F45E0003CCE8 /* SimpsonsQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D878F5F22C7F45E0003CCE8 /* SimpsonsQuotesView.swift */; };
+		3D878F6222C7F46A0003CCE8 /* SimpsonsQuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D878F6122C7F46A0003CCE8 /* SimpsonsQuotesModel.swift */; };
+		3DCBFF8822D26C080070E340 /* SimpsonsQuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCBFF8722D26C080070E340 /* SimpsonsQuotesTableViewCell.swift */; };
+		AF2DB68A7F1BEC4927BF97EB /* Pods_SimpsonsQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0922D92A9F0B33099BC07 /* Pods_SimpsonsQuotes.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00E74C93B7FC55F81D3277E9 /* Pods-SimpsonsQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsQuotes.debug.xcconfig"; path = "Target Support Files/Pods-SimpsonsQuotes/Pods-SimpsonsQuotes.debug.xcconfig"; sourceTree = "<group>"; };
+		24A0922D92A9F0B33099BC07 /* Pods_SimpsonsQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpsonsQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4C279722C92A0600572BCB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3D4C279922C931CD00572BCB /* SimpsonsQuotesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesDelegate.swift; sourceTree = "<group>"; };
+		3D4C279C22C9421A00572BCB /* UITextFieldUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldUtils.swift; sourceTree = "<group>"; };
+		3D4C279F22C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesTableViewExtension.swift; sourceTree = "<group>"; };
+		3D4C27A322D11E4200572BCB /* UIViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerUtils.swift; sourceTree = "<group>"; };
+		3D878F4722C7F3200003CCE8 /* SimpsonsQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D878F4A22C7F3200003CCE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D878F4C22C7F3200003CCE8 /* SimpsonsQuotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesPresenter.swift; sourceTree = "<group>"; };
+		3D878F5122C7F3200003CCE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D878F5622C7F3200003CCE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D878F5F22C7F45E0003CCE8 /* SimpsonsQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesView.swift; sourceTree = "<group>"; };
+		3D878F6122C7F46A0003CCE8 /* SimpsonsQuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesModel.swift; sourceTree = "<group>"; };
+		3DCBFF8722D26C080070E340 /* SimpsonsQuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesTableViewCell.swift; sourceTree = "<group>"; };
+		425BC29110DC9D5A1C37FC7A /* Pods-SimpsonsQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsQuotes.release.xcconfig"; path = "Target Support Files/Pods-SimpsonsQuotes/Pods-SimpsonsQuotes.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D878F4422C7F3200003CCE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2DB68A7F1BEC4927BF97EB /* Pods_SimpsonsQuotes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D4C279B22C9420600572BCB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3D4C279C22C9421A00572BCB /* UITextFieldUtils.swift */,
+				3D4C27A322D11E4200572BCB /* UIViewControllerUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3D4C279E22C942FC00572BCB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3D4C279922C931CD00572BCB /* SimpsonsQuotesDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3D878F3E22C7F3200003CCE8 = {
+			isa = PBXGroup;
+			children = (
+				3D4C279722C92A0600572BCB /* Default-568h@2x.png */,
+				3D878F4922C7F3200003CCE8 /* SimpsonsQuotes */,
+				3D878F4822C7F3200003CCE8 /* Products */,
+				64F2BF518723A87DF06B9D73 /* Pods */,
+				5C6AA7FABD9185AFAF1D3C40 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D878F4822C7F3200003CCE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D878F4722C7F3200003CCE8 /* SimpsonsQuotes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D878F4922C7F3200003CCE8 /* SimpsonsQuotes */ = {
+			isa = PBXGroup;
+			children = (
+				3D878F4A22C7F3200003CCE8 /* AppDelegate.swift */,
+				3D878F5C22C7F33E0003CCE8 /* Model */,
+				3D878F5D22C7F34A0003CCE8 /* View */,
+				3D878F5E22C7F3540003CCE8 /* Presenter */,
+				3D4C279E22C942FC00572BCB /* Protocols */,
+				3D4C279B22C9420600572BCB /* Utils */,
+				3D878F5122C7F3200003CCE8 /* Assets.xcassets */,
+				3D878F5622C7F3200003CCE8 /* Info.plist */,
+			);
+			path = SimpsonsQuotes;
+			sourceTree = "<group>";
+		};
+		3D878F5C22C7F33E0003CCE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D878F6122C7F46A0003CCE8 /* SimpsonsQuotesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D878F5D22C7F34A0003CCE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D878F5F22C7F45E0003CCE8 /* SimpsonsQuotesView.swift */,
+				3D4C279F22C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift */,
+				3DCBFF8722D26C080070E340 /* SimpsonsQuotesTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D878F5E22C7F3540003CCE8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3D878F4C22C7F3200003CCE8 /* SimpsonsQuotesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5C6AA7FABD9185AFAF1D3C40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24A0922D92A9F0B33099BC07 /* Pods_SimpsonsQuotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64F2BF518723A87DF06B9D73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00E74C93B7FC55F81D3277E9 /* Pods-SimpsonsQuotes.debug.xcconfig */,
+				425BC29110DC9D5A1C37FC7A /* Pods-SimpsonsQuotes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D878F4622C7F3200003CCE8 /* SimpsonsQuotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D878F5922C7F3200003CCE8 /* Build configuration list for PBXNativeTarget "SimpsonsQuotes" */;
+			buildPhases = (
+				D28189D8E55005098B7C2BFB /* [CP] Check Pods Manifest.lock */,
+				3D878F4322C7F3200003CCE8 /* Sources */,
+				3D878F4422C7F3200003CCE8 /* Frameworks */,
+				3D878F4522C7F3200003CCE8 /* Resources */,
+				A4BCD9FB3B5326DF74B8FF3E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpsonsQuotes;
+			productName = SimpsonsQuotes;
+			productReference = 3D878F4722C7F3200003CCE8 /* SimpsonsQuotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D878F3F22C7F3200003CCE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = gaston;
+				TargetAttributes = {
+					3D878F4622C7F3200003CCE8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3D878F4222C7F3200003CCE8 /* Build configuration list for PBXProject "SimpsonsQuotes" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D878F3E22C7F3200003CCE8;
+			productRefGroup = 3D878F4822C7F3200003CCE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D878F4622C7F3200003CCE8 /* SimpsonsQuotes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D878F4522C7F3200003CCE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D878F5222C7F3200003CCE8 /* Assets.xcassets in Resources */,
+				3D4C279822C92A0600572BCB /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4BCD9FB3B5326DF74B8FF3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpsonsQuotes/Pods-SimpsonsQuotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpsonsQuotes/Pods-SimpsonsQuotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D28189D8E55005098B7C2BFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpsonsQuotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D878F4322C7F3200003CCE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D878F6022C7F45E0003CCE8 /* SimpsonsQuotesView.swift in Sources */,
+				3D4C279D22C9421A00572BCB /* UITextFieldUtils.swift in Sources */,
+				3D4C279A22C931CD00572BCB /* SimpsonsQuotesDelegate.swift in Sources */,
+				3D878F4D22C7F3200003CCE8 /* SimpsonsQuotesPresenter.swift in Sources */,
+				3DCBFF8822D26C080070E340 /* SimpsonsQuotesTableViewCell.swift in Sources */,
+				3D878F6222C7F46A0003CCE8 /* SimpsonsQuotesModel.swift in Sources */,
+				3D4C27A022C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift in Sources */,
+				3D4C27A422D11E4200572BCB /* UIViewControllerUtils.swift in Sources */,
+				3D878F4B22C7F3200003CCE8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3D878F5722C7F3200003CCE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D878F5822C7F3200003CCE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D878F5A22C7F3200003CCE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00E74C93B7FC55F81D3277E9 /* Pods-SimpsonsQuotes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpsonsQuotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GG.SimpsonsQuotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D878F5B22C7F3200003CCE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425BC29110DC9D5A1C37FC7A /* Pods-SimpsonsQuotes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpsonsQuotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GG.SimpsonsQuotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D878F4222C7F3200003CCE8 /* Build configuration list for PBXProject "SimpsonsQuotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D878F5722C7F3200003CCE8 /* Debug */,
+				3D878F5822C7F3200003CCE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D878F5922C7F3200003CCE8 /* Build configuration list for PBXNativeTarget "SimpsonsQuotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D878F5A22C7F3200003CCE8 /* Debug */,
+				3D878F5B22C7F3200003CCE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D878F3F22C7F3200003CCE8 /* Project object */;
+}
