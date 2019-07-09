@@ -9,7 +9,7 @@
 import Alamofire
 
 public class SimpsonsQuotesPresenter {
-    private var endpoint = "https://thesimpsonsquoteapi.glitch.me/quotes?count="
+    private var endpoint = k.simpsonsQuoteEndpoint
     private var viewDelegate: SimpsonsQuotesViewDelegate
     private var quotes = [SimpsonQuote]()
     
@@ -36,14 +36,15 @@ public class SimpsonsQuotesPresenter {
                                 
                             case .failure(let error):
                                 print(error)
-                                weakSelf?.viewDelegate.showErrorMessage("Ha ocurrido un error")
+                                weakSelf?.viewDelegate.showErrorMessage(k.ErrorMessages.Generic)
+                                return
                             }
                             
                             if let data = DefaultDataResponse.data {
                                 if let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
                                     
                                     if (jsonResult == nil) {
-                                        weakSelf?.viewDelegate.showErrorMessage("No hay citas")
+                                        weakSelf?.viewDelegate.showErrorMessage(k.ErrorMessages.NoQuotesReturned)
                                         return
                                     } else {
                                         if let jsonResult = jsonResult {

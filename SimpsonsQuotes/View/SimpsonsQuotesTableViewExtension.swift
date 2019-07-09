@@ -15,7 +15,7 @@ extension SimpsonsQuotesView : UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let imageDirection = quoteDelegate?.getImageDirection(index: indexPath.row) ?? "Right"
+        let imageDirection = quoteDelegate?.getImageDirection(index: indexPath.row) ?? k.ImageDirection.Right
         
         let cell = SimpsonsQuotesTableViewCell(style: .default, reuseIdentifier: "quoteCell", direction: imageDirection)
         cell.characterName.text = quoteDelegate?.getCharacterName(index: indexPath.row)

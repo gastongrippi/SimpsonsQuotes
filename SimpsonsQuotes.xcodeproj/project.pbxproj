@@ -17,6 +17,7 @@
 		3D878F5222C7F3200003CCE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D878F5122C7F3200003CCE8 /* Assets.xcassets */; };
 		3D878F6022C7F45E0003CCE8 /* SimpsonsQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D878F5F22C7F45E0003CCE8 /* SimpsonsQuotesView.swift */; };
 		3D878F6222C7F46A0003CCE8 /* SimpsonsQuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D878F6122C7F46A0003CCE8 /* SimpsonsQuotesModel.swift */; };
+		3D8E491A22D4F66F009E80C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E491922D4F66F009E80C8 /* Constants.swift */; };
 		3DCBFF8822D26C080070E340 /* SimpsonsQuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCBFF8722D26C080070E340 /* SimpsonsQuotesTableViewCell.swift */; };
 		AF2DB68A7F1BEC4927BF97EB /* Pods_SimpsonsQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0922D92A9F0B33099BC07 /* Pods_SimpsonsQuotes.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		3D878F5622C7F3200003CCE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D878F5F22C7F45E0003CCE8 /* SimpsonsQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesView.swift; sourceTree = "<group>"; };
 		3D878F6122C7F46A0003CCE8 /* SimpsonsQuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesModel.swift; sourceTree = "<group>"; };
+		3D8E491922D4F66F009E80C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3DCBFF8722D26C080070E340 /* SimpsonsQuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesTableViewCell.swift; sourceTree = "<group>"; };
 		425BC29110DC9D5A1C37FC7A /* Pods-SimpsonsQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsQuotes.release.xcconfig"; path = "Target Support Files/Pods-SimpsonsQuotes/Pods-SimpsonsQuotes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +59,7 @@
 			children = (
 				3D4C279C22C9421A00572BCB /* UITextFieldUtils.swift */,
 				3D4C27A322D11E4200572BCB /* UIViewControllerUtils.swift */,
+				3D8E491922D4F66F009E80C8 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				3D4C279A22C931CD00572BCB /* SimpsonsQuotesDelegate.swift in Sources */,
 				3D878F4D22C7F3200003CCE8 /* SimpsonsQuotesPresenter.swift in Sources */,
 				3DCBFF8822D26C080070E340 /* SimpsonsQuotesTableViewCell.swift in Sources */,
+				3D8E491A22D4F66F009E80C8 /* Constants.swift in Sources */,
 				3D878F6222C7F46A0003CCE8 /* SimpsonsQuotesModel.swift in Sources */,
 				3D4C27A022C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift in Sources */,
 				3D4C27A422D11E4200572BCB /* UIViewControllerUtils.swift in Sources */,

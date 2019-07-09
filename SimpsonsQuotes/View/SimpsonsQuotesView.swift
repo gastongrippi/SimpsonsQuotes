@@ -31,7 +31,7 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
     // MARK: Private methods
     private func loadNavigationBarStyles() {
         // Set navigation controller styles
-        title = "Simpsons"
+        title = k.QuotesView.QuotesScreenTitle
         view = UIView.init(frame: .zero)
         view.backgroundColor = .white
         navigationController?.navigationBar.barTintColor = .orange
@@ -47,12 +47,12 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
     
     private func addQuotesSubViews() {
         // Initialize quotes quantity text field
-        quotesQuantity.placeholder = "Quotes quantity"
+        quotesQuantity.placeholder = k.QuotesView.QuotesPlaceholder
         quotesQuantity.setBottomBorder()
         view.addSubview(quotesQuantity)
         
         // Initialize quotes button
-        searchQuotesButton.setTitle("Search quotes", for: .normal)
+        searchQuotesButton.setTitle(k.QuotesView.QuotesSearchButton, for: .normal)
         searchQuotesButton.addTarget(self, action:#selector(loadQuotes) , for: .touchUpInside)
         searchQuotesButton.setTitleColor(.black, for: .normal)
         searchQuotesButton.titleLabel?.numberOfLines = 1
@@ -61,7 +61,7 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
         view.addSubview(searchQuotesButton)
         
         // Initialize quotes table view
-        quotesTableView.estimatedRowHeight = 80.0
+        quotesTableView.estimatedRowHeight = CGFloat(k.QuotesView.EstimatedSimpsonQuoteHeight)
         quotesTableView.rowHeight = UITableViewAutomaticDimension
         view.addSubview(quotesTableView)
     }
@@ -69,21 +69,21 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
     private func addViesConstraints() {
         // Add constraints to quotes quantity text field
         quotesQuantity.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(view).offset(getNavigationBarHeight() + 20.0)
-            make.left.equalTo(view).offset(10)
-            make.right.equalTo(view).offset(-150)
+            make.top.equalTo(view).offset(getNavigationBarHeight() + CGFloat(k.Constraints.GeneralPadding*2))
+            make.left.equalTo(view).offset(k.Constraints.GeneralPadding)
+            make.width.equalTo(k.QuotesView.QuotesQuantityWidth)
         }
         
         // Add constraints to quotes button
         searchQuotesButton.snp.makeConstraints { (make) -> Void in
-            make.right.equalTo(view).offset(-20)
-            make.left.equalTo(quotesQuantity.snp.right).offset(20)
+            make.right.equalTo(view).offset(-k.Constraints.GeneralPadding)
+            make.left.equalTo(quotesQuantity.snp.right).offset(CGFloat(k.Constraints.GeneralPadding*2))
             make.bottom.equalTo(quotesQuantity.snp.bottom)
         }
         
         // Add constraints to table view
         quotesTableView.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(quotesQuantity.snp.bottom).offset(10)
+            make.top.equalTo(quotesQuantity.snp.bottom).offset(k.Constraints.GeneralPadding)
             make.bottom.left.right.equalTo(view)
         }
     }
@@ -93,7 +93,7 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
             if let quantity = Int(quantityText) {
                 quoteDelegate?.getQuotes(quantity)
             } else {
-                showErrorMessage("Introduzca algo")
+                showErrorMessage(k.ErrorMessages.NoQuotesQuantity)
             }
         }
     }
@@ -114,8 +114,8 @@ extension SimpsonsQuotesView: SimpsonsQuotesViewDelegate {
     }
     
     func showErrorMessage(_ error: String) {
-        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        let alert = UIAlertController(title: k.Alerts.Error, message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: k.Alerts.Ok, style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
