@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D4C279822C92A0600572BCB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4C279722C92A0600572BCB /* Default-568h@2x.png */; };
 		3D4C279A22C931CD00572BCB /* SimpsonsQuotesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C279922C931CD00572BCB /* SimpsonsQuotesDelegate.swift */; };
 		3D4C279D22C9421A00572BCB /* UITextFieldUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C279C22C9421A00572BCB /* UITextFieldUtils.swift */; };
 		3D4C27A022C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C279F22C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		00E74C93B7FC55F81D3277E9 /* Pods-SimpsonsQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsQuotes.debug.xcconfig"; path = "Target Support Files/Pods-SimpsonsQuotes/Pods-SimpsonsQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 		24A0922D92A9F0B33099BC07 /* Pods_SimpsonsQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpsonsQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D4C279722C92A0600572BCB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3D4C279922C931CD00572BCB /* SimpsonsQuotesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesDelegate.swift; sourceTree = "<group>"; };
 		3D4C279C22C9421A00572BCB /* UITextFieldUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldUtils.swift; sourceTree = "<group>"; };
 		3D4C279F22C9435D00572BCB /* SimpsonsQuotesTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsQuotesTableViewExtension.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		3D878F3E22C7F3200003CCE8 = {
 			isa = PBXGroup;
 			children = (
-				3D4C279722C92A0600572BCB /* Default-568h@2x.png */,
 				3D878F4922C7F3200003CCE8 /* SimpsonsQuotes */,
 				3D878F4822C7F3200003CCE8 /* Products */,
 				64F2BF518723A87DF06B9D73 /* Pods */,
@@ -211,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D878F5222C7F3200003CCE8 /* Assets.xcassets in Resources */,
-				3D4C279822C92A0600572BCB /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +389,7 @@
 			baseConfigurationReference = 00E74C93B7FC55F81D3277E9 /* Pods-SimpsonsQuotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpsonsQuotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -408,6 +405,7 @@
 			baseConfigurationReference = 425BC29110DC9D5A1C37FC7A /* Pods-SimpsonsQuotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpsonsQuotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
