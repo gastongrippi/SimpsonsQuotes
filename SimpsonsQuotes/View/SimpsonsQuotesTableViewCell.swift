@@ -85,7 +85,7 @@ public class SimpsonsQuotesTableViewCell: UITableViewCell {
     private func applyCharacterNameConstraints() {
         contentView.addSubview(characterName)
         characterName.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(characterQuote.snp.bottom).offset(k.Constraints.GeneralPadding)
+            make.top.equalTo(characterQuote.snp.bottom).offset(k.Constraints.GeneralPadding/2)
             make.bottom.lessThanOrEqualTo(contentView.snp.bottom).offset(-k.Constraints.GeneralPadding)
             if (imageDirection == k.ImageDirection.Right) {
                 make.right.equalTo(characterImage.snp.left).offset(-k.Constraints.GeneralPadding)
