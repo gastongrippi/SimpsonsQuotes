@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        window = UIWindow.init(frame: UIScreen.main.bounds)
         
         // List of quotes is our first screen
         let launchScreen = SimpsonsQuotesView()

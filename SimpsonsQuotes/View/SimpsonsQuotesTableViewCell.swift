@@ -19,7 +19,7 @@ public class SimpsonsQuotesTableViewCell: UITableViewCell {
     
     
     //MARK: Initializers
-    convenience init(style: UITableViewCellStyle, reuseIdentifier: String?, direction: String) {
+    convenience init(style: UITableViewCellStyle, reuseIdentifier: String?, direction: String = "Right") {
         self.init(style: style, reuseIdentifier: reuseIdentifier)
         imageDirection = direction
         selectionStyle = .none;
@@ -56,10 +56,14 @@ public class SimpsonsQuotesTableViewCell: UITableViewCell {
         contentView.addSubview(characterImage)
         characterImage.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(contentView.snp.top)
-            make.height.equalTo(70)
             make.bottom.lessThanOrEqualTo(contentView.snp.bottom)
+            make.height.equalTo(70)
             make.width.equalTo(50)
-            make.right.equalTo(contentView.snp.right)
+            if (imageDirection == "Right") {
+                make.right.equalTo(contentView.snp.right)
+            } else {
+                make.left.equalTo(contentView.snp.left)
+            }
         }
     }
     
@@ -67,9 +71,14 @@ public class SimpsonsQuotesTableViewCell: UITableViewCell {
         contentView.addSubview(characterQuote)
         characterQuote.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(contentView.snp.top)
-            make.left.equalTo(contentView.snp.left)
-            make.right.equalTo(characterImage.snp.left)
             make.bottom.lessThanOrEqualTo(contentView.snp.bottom)
+            if (imageDirection == "Right") {
+                make.left.equalTo(contentView.snp.left)
+                make.right.equalTo(characterImage.snp.left)
+            } else {
+                make.left.equalTo(characterImage.snp.right)
+                make.right.equalTo(contentView.snp.right)
+            }
         }
     }
     
@@ -78,8 +87,13 @@ public class SimpsonsQuotesTableViewCell: UITableViewCell {
         characterName.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(characterQuote.snp.bottom)
             make.bottom.lessThanOrEqualTo(contentView.snp.bottom)
-            make.right.equalTo(characterImage.snp.left)
-            make.left.equalTo(contentView.snp.left)
+            if (imageDirection == "Right") {
+                make.right.equalTo(characterImage.snp.left)
+                make.left.equalTo(contentView.snp.left)
+            } else {
+                make.right.equalTo(contentView.snp.right)
+                make.left.equalTo(characterImage.snp.right)
+            }
         }
     }
     

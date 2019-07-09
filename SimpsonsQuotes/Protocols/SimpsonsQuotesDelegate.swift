@@ -9,6 +9,7 @@ import UIKit
 
 protocol SimpsonsQuotesViewDelegate {
     func reloadQuotesTableView()
-    func removeLoadingIndicator()
     func showErrorMessage(_ error: String)
+    func showLoadingOnTable()
+    func removeLoadingIndicator()
 }

@@ -31,9 +31,9 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
     // MARK: Private methods
     private func loadNavigationBarStyles() {
         // Set navigation controller styles
-        self.title = "Simpsons"
-        self.view = UIView.init(frame: .zero)
-        self.view.backgroundColor = .white
+        title = "Simpsons"
+        view = UIView.init(frame: .zero)
+        view.backgroundColor = .white
         navigationController?.navigationBar.barTintColor = .orange
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
@@ -41,15 +41,15 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
     private func setDelegates() {
         quoteDelegate = SimpsonsQuotesPresenter(delegate: self)
         quotesQuantity.delegate = self
-        self.quotesTableView.delegate = self
-        self.quotesTableView.dataSource = self
+        quotesTableView.delegate = self
+        quotesTableView.dataSource = self
     }
     
     private func addQuotesSubViews() {
         // Initialize quotes quantity text field
         quotesQuantity.placeholder = "Quotes quantity"
         quotesQuantity.setBottomBorder()
-        self.view.addSubview(quotesQuantity)
+        view.addSubview(quotesQuantity)
         
         // Initialize quotes button
         searchQuotesButton.setTitle("Search quotes", for: .normal)
@@ -58,45 +58,43 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
         searchQuotesButton.titleLabel?.numberOfLines = 1
         searchQuotesButton.titleLabel?.adjustsFontSizeToFitWidth = true
         searchQuotesButton.backgroundColor = .lightGray
-        self.view.addSubview(searchQuotesButton)
+        view.addSubview(searchQuotesButton)
         
         // Initialize quotes table view
         quotesTableView.estimatedRowHeight = 80.0
         quotesTableView.rowHeight = UITableViewAutomaticDimension
-        self.view.addSubview(quotesTableView)
+        view.addSubview(quotesTableView)
     }
     
     private func addViesConstraints() {
         // Add constraints to quotes quantity text field
         quotesQuantity.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(self.view).offset(self.getNavigationBarHeight() + 20.0)
-            make.left.equalTo(self.view).offset(10)
-            make.right.equalTo(self.view).offset(-150)
+            make.top.equalTo(view).offset(getNavigationBarHeight() + 20.0)
+            make.left.equalTo(view).offset(10)
+            make.right.equalTo(view).offset(-150)
         }
         
         // Add constraints to quotes button
         searchQuotesButton.snp.makeConstraints { (make) -> Void in
-            make.right.equalTo(self.view).offset(-20)
-            make.left.equalTo(self.quotesQuantity.snp.right).offset(20)
-            make.bottom.equalTo(self.quotesQuantity.snp.bottom)
+            make.right.equalTo(view).offset(-20)
+            make.left.equalTo(quotesQuantity.snp.right).offset(20)
+            make.bottom.equalTo(quotesQuantity.snp.bottom)
         }
         
         // Add constraints to table view
         quotesTableView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(quotesQuantity.snp.bottom).offset(10)
-            make.bottom.left.right.equalTo(self.view)
+            make.bottom.left.right.equalTo(view)
         }
     }
     
     @objc private func loadQuotes() {
-        // Add it to the view where you want it to appear
-        quotesTableView.addSubview(activityIndicator)
-        // Set up its size (the super view bounds usually)
-        activityIndicator.frame = quotesTableView.bounds
-        activityIndicator.startAnimating()
         if let quantityText = quotesQuantity.text {
-            let quantity = Int(quantityText) ?? 0
-            quoteDelegate?.getQuotes(quantity)
+            if let quantity = Int(quantityText) {
+                quoteDelegate?.getQuotes(quantity)
+            } else {
+                showErrorMessage("Introduzca algo")
+            }
         }
     }
     
@@ -112,17 +110,25 @@ public class SimpsonsQuotesView: UIViewController, UITextFieldDelegate {
 extension SimpsonsQuotesView: SimpsonsQuotesViewDelegate {
     // MARK: SimpsonsQuotesViewDelegate
     func reloadQuotesTableView() {
-        self.quotesTableView.reloadData()
-    }
-    
-    func removeLoadingIndicator() {
-        activityIndicator.removeFromSuperview()
+        quotesTableView.reloadData()
     }
     
     func showErrorMessage(_ error: String) {
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func showLoadingOnTable() {
+        // Add it to the view where you want it to appear
+        quotesTableView.addSubview(activityIndicator)
+        // Set up its size (the super view bounds usually)
+        activityIndicator.frame = quotesTableView.bounds
+        activityIndicator.startAnimating()
+    }
+    
+    func removeLoadingIndicator() {
+        activityIndicator.removeFromSuperview()
     }
 }
 

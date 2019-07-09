@@ -20,28 +20,30 @@ public class SimpsonsQuotesPresenter {
     
     // MARK: private methods
     func getQuotes(_ quantity: Int) {
+        viewDelegate.showLoadingOnTable()
         quotes = []
+        weak var weakSelf: SimpsonsQuotesPresenter? = self
         let request = "\(endpoint)\(quantity)"
         Alamofire.request(request,
                           method: .get,
                           parameters: nil,
                           encoding: JSONEncoding(options:.prettyPrinted),
                           headers: nil).validate().responseJSON { (DefaultDataResponse) in
-                            self.viewDelegate.removeLoadingIndicator()
+                            weakSelf?.viewDelegate.removeLoadingIndicator()
 
                             switch DefaultDataResponse.result {
                             case .success: break
                                 
                             case .failure(let error):
                                 print(error)
-                                self.viewDelegate.showErrorMessage("Ha ocurrido un error")
+                                weakSelf?.viewDelegate.showErrorMessage("Ha ocurrido un error")
                             }
                             
                             if let data = DefaultDataResponse.data {
                                 if let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
                                     
                                     if (jsonResult == nil) {
-                                        self.viewDelegate.showErrorMessage("No hay citas")
+                                        weakSelf?.viewDelegate.showErrorMessage("No hay citas")
                                         return
                                     } else {
                                         if let jsonResult = jsonResult {
@@ -49,10 +51,10 @@ public class SimpsonsQuotesPresenter {
                                                 let jsonData = try? JSONSerialization.data(withJSONObject: quote, options: .prettyPrinted)
                                                 if let quote = try? JSONDecoder().decode(SimpsonQuote.self, from: jsonData!) {
                                                     print(quote)
-                                                    self.quotes.append(quote)
+                                                    weakSelf?.quotes.append(quote)
                                                 }
                                             }
-                                            self.viewDelegate.reloadQuotesTableView()
+                                            weakSelf?.viewDelegate.reloadQuotesTableView()
                                         }
                                     }
                                 }

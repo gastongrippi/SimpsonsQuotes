@@ -15,14 +15,14 @@ extension SimpsonsQuotesView : UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let imageDirection = quoteDelegate?.getImageDirection(index: indexPath.row) ?? "right"
+        let imageDirection = quoteDelegate?.getImageDirection(index: indexPath.row) ?? "Right"
         
         let cell = SimpsonsQuotesTableViewCell(style: .default, reuseIdentifier: "quoteCell", direction: imageDirection)
         cell.characterName.text = quoteDelegate?.getCharacterName(index: indexPath.row)
         cell.characterQuote.text = quoteDelegate?.getCharacterQuote(index: indexPath.row)
         
         let imageURL = quoteDelegate?.getCharacterImage(index: indexPath.row) ?? ""
-        cell.characterImage.sd_setImage(with: URL(string: imageURL), completed: nil)
+        cell.characterImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "doughnut"), completed: nil)
         
         // Make sure the constraints have been added to this cell, since it may have just been created from scratch
         cell.needsUpdateConstraints()

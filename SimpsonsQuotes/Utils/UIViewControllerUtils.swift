@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     func getNavigationBarHeight() -> CGFloat {
-        if let navigationHeight = self.navigationController?.navigationBar.frame.height {
+        if let navigationHeight = navigationController?.navigationBar.frame.height {
             return navigationHeight + UIApplication.shared.statusBarFrame.height
         } else {
             return UIApplication.shared.statusBarFrame.height
